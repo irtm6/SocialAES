@@ -12,7 +12,7 @@ namespace DAL.Repositories.Impl
         : IRepository<T>
         where T : class
     {
-        private readonly DbSet<T> _set;
+        protected readonly DbSet<T> _set;
         private readonly DbContext _context;
         public BaseRepository(DbContext context)
         {
@@ -51,6 +51,6 @@ namespace DAL.Repositories.Impl
         {
             _context.Entry(item).State = EntityState.Modified;
         }
-
+        
     }
 }

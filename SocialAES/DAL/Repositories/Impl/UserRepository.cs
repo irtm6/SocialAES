@@ -16,6 +16,11 @@ namespace DAL.Repositories.Impl
             : base(context) 
         {
         }
+        public IEnumerable<User> FindByUserName(string userName)
+        {
+            // Пошук користувачів за UserName
+            return _set.Where(user => user.UserName.Contains(userName, StringComparison.OrdinalIgnoreCase)).ToList();
+        }
 
     }
 }
