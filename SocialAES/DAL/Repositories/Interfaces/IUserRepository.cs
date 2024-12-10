@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL.Entities;
 
 namespace DAL.Repositories.Interfaces
 {
-    internal interface IUserRepository
+    public interface IUserRepository 
+        : IRepository<User>
     {
     }
 }
