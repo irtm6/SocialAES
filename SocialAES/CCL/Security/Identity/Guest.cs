@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace CCL.Security.Identity
 {
-    public class User
+    public class Guest
  : BaseUser
     {
-        public User(int userId, string username, string email)
-        : base(userId, username, email, nameof(User))
+        public Guest(int userId, string username, string email)
+        : base(userId, username, email, nameof(Guest))
         {
         }
     }
-
 }
